@@ -10,6 +10,10 @@
             informacoesConta.NumeroConta = 123456;
             informacoesConta.Saldo = 15.50m;
             informacoesConta.ExibirDados();
+
+            ContaCorrente saqueContaCorrente = new ContaCorrente();
+
+            saqueContaCorrente.ExibirSaque();
         }
     }
 }
