@@ -8,13 +8,23 @@ namespace Sprint_01
     {
         public int NumeroConta { get; set; }
         public string Titular { get; set; }
-        public decimal Saldo { get; set; }
-
-        public void ExibirDados()
+        public decimal Saldo { get; protected set; }
+        
+        public ContaBancaria(string titular, int numeroConta)
         {
-            Console.WriteLine($"titular da conta: {Titular}");
-            Console.WriteLine($"numero da conta: {NumeroConta}");
-            Console.WriteLine($"saldo: {Saldo}");
+            Titular = titular;
+            NumeroConta = numeroConta;
+            Saldo = 0;
+        }
+
+        public void Depositar(decimal valor)
+        {
+            Saldo = valor + Saldo;
+        }
+
+        public void Sacar(decimal valor)
+        {
+            Saldo = Saldo - valor;
         }
     }
 }

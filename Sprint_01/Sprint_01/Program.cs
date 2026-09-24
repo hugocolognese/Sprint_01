@@ -4,16 +4,9 @@
     {
         static void Main(string[] args)
         {
-            ContaBancaria informacoesConta = new ContaBancaria();
-
-            informacoesConta.Titular = "Hugo";
-            informacoesConta.NumeroConta = 123456;
-            informacoesConta.Saldo = 15.50m;
-            informacoesConta.ExibirDados();
-
-            ContaCorrente saqueContaCorrente = new ContaCorrente();
-
-            saqueContaCorrente.ExibirSaque();
+            ContaBancaria conta = new ContaBancaria("teste", 123456);
+            conta.Saldo = 15.50m;
+            conta.Depositar();
         }
     }
 }
